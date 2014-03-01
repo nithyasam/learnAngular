@@ -1,4 +1,4 @@
 learnAngular
 ============
 
-Angular js - Bootstrap
+Angular js - Bootstrap.
