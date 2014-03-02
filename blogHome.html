@@ -28,15 +28,14 @@ body {
 <body>
 	<H1>Hello...!</H1>
 	<hr>
-	<div ng-controller='TabsCtrl'>
-		<tabset> <tab ng-repeat="tab in tabs" heading="{{tab.title}}">
-		{{tab.content}} </tab> </tabset>
-	</div>
+	
+
 	<div>
 		<a href="#Posts">Posts</a>&nbsp; <a href="#AboutMe">About Me</a>
 		&nbsp;<a href="#MyFriends">MyFriends!</a>
 
 	</div>
 	<div ng-view></div>
+
 </body>
 </html>

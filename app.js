@@ -2,13 +2,16 @@ var myApp = angular.module("myApp", ['ui.bootstrap']);
 
 myApp.controller('TabsCtrl', [ '$scope', function($scope) {
 	$scope.tabs = [ {
-		title : "Dynamic Title 1",
-		content : "Dynamic content 1"
+		title : "Posts",
+		url : "#Post"
 	}, {
-		title : "Dynamic Title 2",
-		content : "Dynamic content 2",
-		disabled : true
-	} ]
+		title : "About Me",
+		url : "#AboutMe"
+		
+	} ,{
+		title:"My Friends",
+		url :"#MyFriends"
+	}]
 
 } ]);
 
