@@ -3,7 +3,7 @@ var myApp = angular.module("myApp", ['ui.bootstrap']);
 myApp.controller('TabsCtrl', [ '$scope', function($scope) {
 	$scope.tabs = [ {
 		title : "Posts",
-		url : "#Post"
+		url : "#Posts"
 	}, {
 		title : "About Me",
 		url : "#AboutMe"

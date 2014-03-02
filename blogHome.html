@@ -4,38 +4,57 @@
 <meta charset="UTF-8">
 
 <link
-	href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css"
+	href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"
 	rel="stylesheet">
-<style type="text/css">
-body {
-	padding-top: 60px;
-	padding-bottom: 40px;
-}
-</style>
 
 <script
 	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
 <script
 	src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.10.0.js"></script>
+
 <script src="app.js"></script>
 <script src="Post.js"></script>
 <script src="AboutMe.js"></script>
 <script src="MyFriends.js"></script>
 
-<title>Welcome ....</title>
+<title>My Little World!</title>
 </head>
 
 <body>
-	<H1>Hello...!</H1>
-	<hr>
-	
 
-	<div>
-		<a href="#Posts">Posts</a>&nbsp; <a href="#AboutMe">About Me</a>
-		&nbsp;<a href="#MyFriends">MyFriends!</a>
+<div class="container">
+    
+    <div class="navbar navbar-inverse">
+      <ul class="nav navbar-nav" ng-controller="TabsCtrl">      
+        <li ng-class="navClass('Posts')"><a href='#/Posts'>Posts</a></li>
+        <li ng-class="navClass('AboutMe')"><a href='#/AboutMe'>About Me</a></li>
+        <li ng-class="navClass('MyFriends')"><a href='#/MyFriends'>My Friends</a></li>
+      </ul>
+    </div>
+  </div>
 
+	<!--  <div class="container">
+
+		<div class="navbar navbar-inverse">
+			<div class="navbar-innner">
+					<ul class="nav nav-list">
+						<li><a href="#Posts">Posts</a></li><li><a href="#AboutMe">About Me</a></li><li><a href="#MyFriends">My Friends</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>-->
+		
+		
+		<!-- <div ng-controller="TabsCtrl">
+		<div class="navbar">
+			<div class="navbar-inner">
+				<ul class="nav" ng-repeat="tab in tabs">
+					<li><a href="{{tab.url}}">{{tab.title}}</a></li>
+				</ul>
+			</div>
+		</div>  -->
+
+		<div ng-view></div>
 	</div>
-	<div ng-view></div>
-
 </body>
 </html>
